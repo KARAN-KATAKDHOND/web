@@ -1,3 +1,1 @@
-<P>HEY FOLKS KARAN KATAKDHOND HERE!</P>
-<BR>
-<P>hOW ARE YOU'LL</P>
+<h1>Basic Webpages created during High School Studies using basic HTML,CSS & JS</h1>
