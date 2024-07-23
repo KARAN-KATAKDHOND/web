@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width">
+<title>Temprature converter</title>
+<style>
+    body{
+        padding: 50px;
+    }
+    h1{
+        text-align: center;
+    }
+    #container{
+        text-align:center;
+        background-color: aqua;
+        padding: 50px;
+
+    }
+    .mi{
+        display: inline-block;
+       
+    }
+    .inp{
+        padding: 5px 10px;
+        margin: 15px;
+        font-size: 40px;
+        text-align: center;
+        font-weight: bold;
+        width: 400px;
+    }
+    label{
+        font-weight: bolder;
+        font-size: 30px;;
+    }
+    P{
+        float:right;
+        font-style: italic;
+      
+    }
+</style>
+
+</head>
+<body>
+    <h1>Temprature converter</h1>
+    
+  
+    <div id="container">
+        <div class="mi">
+            <label>Celsius</label><br>
+<input type="number" value="0" id="cel" class="inp">
+        </div>
+        
+        <div class="mi">
+            <label>Fahrenheit</label><br>
+<input type="number" value="273.15" id="kel" class="inp">
+        </div>
+    </div>
+<script type="text/javascript">
+    var cel= document.getElementById("cel");
+    var farh = document.getElementById("kel");
+      cel.addEventListener('input',function(){
+          let c= this.value;
+          let x= Number(c);
+          let k = x+273.15;
+          kel.value = k;
+        if(!Number.isInteger(k)){
+             kel.value = k.toFixed(4);
+       }
+    });
+       kel.addEventListener('input',function(){
+        let k= this.value;
+        let y=Number(k);
+        let c= (y-273.15);
+        cel.value = c;
+       
+       if(!Number.isInteger(c)){
+            cel.value = c.toFixed(4);
+        }
+    });
+
+</script>
+<p>~KARAN KATAKDHOND</p>
+</body>
+</html>
